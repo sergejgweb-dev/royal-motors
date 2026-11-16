@@ -70,7 +70,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; }
     position: relative;
     isolation: isolate;
     min-height: 540px;
-    min-height: max(540px, 78svh);
+    min-height: max(540px, 78svh, calc(100vw * 748 / 480));
     align-items: center;
   }
 
@@ -87,7 +87,9 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; }
   }
 
   .hero-video video {
-    inset: 0;
+    inset: 50% 0 auto;
+    height: auto;
+    transform: translateY(-50%);
     object-fit: contain;
     object-position: center;
   }

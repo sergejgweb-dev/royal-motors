@@ -69,6 +69,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; }
   .hero {
     position: relative;
     isolation: isolate;
+    width: 100%;
     min-height: 540px;
     min-height: max(540px, 78svh, calc(100vw * 748 / 480));
     align-items: center;
@@ -76,14 +77,12 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; }
 
   .intro {
     z-index: auto;
-    padding-block: 74px;
+    padding: 74px 18px;
   }
 
   .hero-video {
     position: absolute;
-    inset: 0 auto 0 50%;
-    width: 100vw;
-    transform: translateX(-50%);
+    inset: 0;
     z-index: -1;
     background: var(--dark);
   }
@@ -91,6 +90,7 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; }
   .hero-video video {
     inset: 50% 0 auto;
     height: auto;
+    aspect-ratio: 480 / 748;
     transform: translateY(-50%);
     object-fit: contain;
     object-position: center;

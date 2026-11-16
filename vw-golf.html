@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Volkswagen Golf | Royal Motors</title>
-  <link rel="stylesheet" href="stil.css?v=gallery-2">
-  <script src="galerija.js?v=2" defer></script>
+  <link rel="stylesheet" href="stil.css?v=gallery-3">
+  <script src="galerija.js?v=3" defer></script>
 </head>
 <body>
   <header class="wrap top">
@@ -14,9 +14,7 @@
   </header>
   <main class="wrap vehicle-page">
     <div class="vehicle-gallery" aria-label="Galerija vozila">
-      <div class="gallery-frame">
-        <img src="slike/vw-golf.jpg" alt="Volkswagen Golf – fotografija 1" data-model="Volkswagen Golf" width="1200" height="675">
-      </div>
+      <button type="button" class="gallery-frame" aria-label="Otvori fotografiju preko cijelog ekrana"><img src="slike/vw-golf.jpg" alt="Volkswagen Golf – fotografija 1" data-model="Volkswagen Golf" width="1200" height="675"></button>
       <div class="gallery-options" role="group" aria-label="Odaberi fotografiju">
         <button type="button" aria-label="Fotografija 1" aria-pressed="true" data-source="https://commons.wikimedia.org/wiki/File:2018_Volkswagen_Golf_SE_Navigation_TDi_BM_facelift_2.0_Front.jpg"><img src="slike/vw-golf.jpg" alt=""></button>
         <button type="button" aria-label="Fotografija 2" aria-pressed="false" data-source="https://commons.wikimedia.org/wiki/File:2018_Volkswagen_Golf_SE_Navigation_TDi_BM_facelift_2.0_Rear.jpg"><img src="slike/vw-golf-2.jpg" alt=""></button>
@@ -41,5 +39,12 @@
       <ul class="vehicle-equipment"><li>Klima</li><li>Bluetooth</li><li>Parking senzori</li></ul>
     </section>
   </main>
+  <dialog class="gallery-viewer" aria-label="Galerija preko cijelog ekrana">
+    <button type="button" class="viewer-close" autofocus>Zatvori ×</button>
+    <button type="button" class="viewer-prev" aria-label="Prethodna fotografija">‹</button>
+    <img class="viewer-image" alt="" draggable="false">
+    <button type="button" class="viewer-next" aria-label="Sljedeća fotografija">›</button>
+    <p class="viewer-count" aria-live="polite"></p>
+  </dialog>
 </body>
 </html>

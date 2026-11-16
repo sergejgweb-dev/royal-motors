@@ -201,3 +201,14 @@ footer .wrap { display: flex; justify-content: space-between; gap: 16px; }
 }
 
 .location-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+
+button.gallery-frame { display: block; width: 100%; border: 0; padding: 0; cursor: zoom-in; }
+.gallery-viewer { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; border: 0; padding: 0; overflow: hidden; background: var(--dark); color: var(--light); }
+.gallery-viewer::backdrop { background: var(--dark); }
+.gallery-viewer button { position: absolute; z-index: 1; min-width: 44px; min-height: 44px; border: 1px solid #888; border-radius: 5px; background: var(--dark); color: inherit; cursor: pointer; }
+.viewer-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; touch-action: pinch-zoom; }
+.viewer-close { top: max(12px, env(safe-area-inset-top)); right: 12px; padding-inline: 12px; }
+.viewer-prev, .viewer-next { top: 50%; transform: translateY(-50%); font-size: 1.75rem; }
+.viewer-prev { left: 8px; }
+.viewer-next { right: 8px; }
+.viewer-count { position: absolute; bottom: max(12px, env(safe-area-inset-bottom)); left: 50%; transform: translateX(-50%); padding: 6px 10px; border-radius: 4px; background: var(--dark); pointer-events: none; }

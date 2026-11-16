@@ -1,15 +1,16 @@
 const gallery = document.querySelector(".vehicle-gallery");
-const frame = gallery.querySelector(".gallery-frame");
-const photo = frame.querySelector("img");
-const views = gallery.querySelectorAll("[data-view]");
+const photo = gallery.querySelector(".gallery-frame img");
+const credit = gallery.querySelector(".photo-credit a");
+const options = gallery.querySelectorAll(".gallery-options button");
 
-for (const view of views) {
-  view.addEventListener("click", () => {
-    for (const option of views) {
-      option.setAttribute("aria-pressed", String(option === view));
+for (const option of options) {
+  option.addEventListener("click", () => {
+    for (const button of options) {
+      button.setAttribute("aria-pressed", String(button === option));
     }
 
-    frame.dataset.view = view.dataset.view;
-    photo.alt = `${photo.dataset.model} – ${view.textContent.trim().toLowerCase()}`;
+    photo.src = option.querySelector("img").src;
+    photo.alt = `${photo.dataset.model} – ${option.getAttribute("aria-label").toLowerCase()}`;
+    credit.href = option.dataset.source;
   });
 }

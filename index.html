@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="bs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Royal Motors | Prodaja automobila</title>
+  <meta name="description" content="Royal Motors — pregled ponude automobila.">
+  <link rel="stylesheet" href="stil.css">
+  <script src="ponuda.js" defer></script>
+</head>
+<body>
+  <div class="site-intro" aria-hidden="true">
+    <img src="slike/logo-royal-motors.jpg" alt="" width="132" height="132">
+  </div>
+  <header class="wrap top">
+    <a class="brand" href="#pocetna"><img src="slike/logo-royal-motors.jpg" alt=""><span>ROYAL<span class="accent"> MOTORS</span></span></a>
+    <nav aria-label="Glavna navigacija">
+      <a href="#ponuda">Ponuda</a>
+      <a href="#o-nama">O nama</a>
+      <a href="#lokacija">Lokacija</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+  <main id="pocetna">
+    <section class="contact-bar" id="kontakt" aria-label="Kontakt i društvene mreže">
+      <div class="wrap contact-row">
+        <span class="phone">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3H5a2 2 0 0 0-2 2c0 8.8 7.2 16 16 16a2 2 0 0 0 2-2v-3l-5-2-2 3a13 13 0 0 1-7-7l3-2z"/></svg>
+          <span>Telefon: uskoro</span>
+        </span>
+        <ul class="socials" aria-label="Društvene mreže">
+          <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</li>
+          <li><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2h3a5 5 0 0 0 5 5v3a8 8 0 0 1-5-1.75V16a6 6 0 1 1-6-6h1v3h-1a3 3 0 1 0 3 3z"/></svg> TikTok</li>
+        </ul>
+      </div>
+    </section>
+    <section class="wrap hero" aria-labelledby="naslov">
+      <div class="intro">
+        <p class="label"><span></span> PRODAJA AUTOMOBILA</p>
+        <h1 id="naslov">Pronađi svoj<br>sljedeći auto<span class="accent">.</span></h1>
+        <p>Istraži ponudu Royal Motorsa i suzi izbor prema marki ili tipu vozila.</p>
+        <a class="button" href="#ponuda">Pogledaj ponudu <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-video">
+        <video id="salon-video" autoplay muted loop playsinline preload="auto" poster="slike/salon.jpg" aria-label="Video salona Royal Motors">
+          <source src="video-royalmotors_files/video-for-section.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
+    <section class="stats" aria-labelledby="stats-title">
+      <div class="wrap stats-layout">
+        <h2 id="stats-title">Royal Motors u brojkama</h2>
+        <dl class="stats-list">
+          <div class="stat">
+            <dt>Automobila</dt>
+            <dd><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 11 2-5h10l2 5M5 11h14l2 2v5H3v-5zM5 18v2m14-2v2M7 14h1m8 0h1"/></svg></span><span class="stat-value"><span data-count="50">50</span>+</span></dd>
+          </div>
+          <div class="stat">
+            <dt>Zadovoljnih klijenata</dt>
+            <dd><span class="stat-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m2 11 4-5 4 2m12 3-4-5-4 1-4 3a1.5 1.5 0 0 0 2 2l2-1 5 5m-17-5 4 4 5 4a2 2 0 0 0 2.5 0l5.5-3 3-5m-14 3 5 4m-2-6 5 4"/></svg></span><span class="stat-value"><span data-count="100">100</span>+</span></dd>
+          </div>
+        </dl>
+        <p class="stats-note">Primjer prikaza statistike.</p>
+      </div>
+    </section>
+    <section class="catalog" id="ponuda" aria-labelledby="ponuda-naslov">
+      <div class="wrap">
+        <div class="section-heading">
+          <div><p class="label"><span></span> KATALOG</p><h2 id="ponuda-naslov">Ponuda vozila</h2></div>
+          <p>Primjeri oglasa za prikaz izgleda kataloga.</p>
+        </div>
+        <form id="filter">
+          <label>Marka<select id="marka"><option value="">Sve marke</option><option>Audi</option><option>BMW</option><option>Volkswagen</option></select></label>
+          <label>Tip vozila<select id="tip"><option value="">Svi tipovi</option><option>Limuzina</option><option>SUV</option><option>Hatchback</option></select></label>
+          <button class="button" type="submit">Prikaži vozila <span aria-hidden="true">↗</span></button>
+        </form>
+        <p id="rezultati" role="status"></p>
+        <div class="cards">
+          <article data-marka="Audi" data-tip="Limuzina" data-photo-source="https://commons.wikimedia.org/wiki/File:2020_Audi_A4_S_Line_35_TDi_S-A_facelift_2.0_Front.jpg">
+            <img class="vehicle-photo" src="slike/audi-a4.jpg" alt="Audi A4" loading="lazy">
+            <div class="vehicle-info">
+              <p class="category">Limuzina</p>
+              <h3>Audi A4</h3>
+              <p class="spec">2020 · Dizel · Automatik</p>
+              <p class="price">34.900 KM</p>
+              <a class="button vehicle-details-button" href="audi-a4.html" aria-label="Pogledaj detalje za Audi A4">Pogledaj detalje <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article data-marka="BMW" data-tip="SUV" data-photo-source="https://commons.wikimedia.org/wiki/File:2018_BMW_X3_xDrive30d_M_Sport_Automatic_3.0_Front.jpg">
+            <img class="vehicle-photo" src="slike/bmw-x3.jpg" alt="BMW X3" loading="lazy">
+            <div class="vehicle-info">
+              <p class="category">SUV</p>
+              <h3>BMW X3</h3>
+              <p class="spec">2021 · Dizel · Automatik</p>
+              <p class="price">54.900 KM</p>
+              <a class="button vehicle-details-button" href="bmw-x3.html" aria-label="Pogledaj detalje za BMW X3">Pogledaj detalje <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+          <article data-marka="Volkswagen" data-tip="Hatchback" data-photo-source="https://commons.wikimedia.org/wiki/File:2018_Volkswagen_Golf_SE_Navigation_TDi_BM_facelift_2.0_Front.jpg">
+            <img class="vehicle-photo" src="slike/vw-golf.jpg" alt="Volkswagen Golf" loading="lazy">
+            <div class="vehicle-info">
+              <p class="category">Hatchback</p>
+              <h3>Volkswagen Golf</h3>
+              <p class="spec">2019 · Dizel · Manuelni</p>
+              <p class="price">23.900 KM</p>
+              <a class="button vehicle-details-button" href="vw-golf.html" aria-label="Pogledaj detalje za Volkswagen Golf">Pogledaj detalje <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="wrap about" id="o-nama">
+      <div><p class="label"><span></span> O NAMA</p><h2>Royal Motors</h2></div>
+      <p>Royal Motors je salon za prodaju automobila. U katalogu možeš uporediti cijene, godišta i osnovne podatke o vozilima.</p>
+    </section>
+    <section class="location" id="lokacija" aria-labelledby="location-title">
+      <div class="wrap location-row">
+        <div>
+          <h2 id="location-title">Lokacija salona</h2>
+          <address>Put srpske vojske 167, Gradiška</address>
+        </div>
+      </div>
+      <div class="wrap">
+        <iframe class="location-map"
+          title="Google mapa — Auto Centar Royal Motors, Gradiška"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2815.2764645547823!2d17.281032776084963!3d45.12073317107035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47675f0046fc1e49%3A0xe9194bb80533a9a9!2sAuto%20Centar%20Royal%20Motors!5e0!3m2!1sen!2sba!4v1794830768728!5m2!1sen!2sba"
+          width="600" height="450" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <div class="location-actions">
+          <a class="button" href="https://www.google.com/maps/dir/?api=1&amp;destination=Auto%20Centar%20Royal%20Motors%2C%20Put%20srpske%20vojske%20167%2C%20Gradi%C5%A1ka" target="_blank" rel="noopener">Kako do nas <span aria-hidden="true">↗</span></a>
+          <a class="button" href="tel:+38766704700">Pozovi nas</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>Royal Motors</span><a href="#pocetna">Na vrh ↑</a></div></footer>
+</body>
+</html>
